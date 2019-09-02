@@ -2,7 +2,7 @@ package com.techprogramming.gamelife;
 
 public class Board {
 	
-	public static final String ANSI_RESET = "\u001B[0m";
+	
 	private Organism organisms[][];
 	private int rows;
 	private int columns;
@@ -36,9 +36,9 @@ public class Board {
 			for (int j = 0; j < this.organisms[i].length; j++) {
 		        Organism o = this.organisms[i][j];
 		        if(o.isAlive()){
-		        	System.out.print("\u001B[32m"+"O"+ANSI_RESET+"\t");
+		        	System.out.print("O"+"\t");
 		        }else {
-		        	System.out.print("\u001B[31m"+"X"+"\u001B[31m"+ANSI_RESET+"\t");
+		        	System.out.print("X"+"\t");
 		        }
 		    }
 		    System.out.println("");
