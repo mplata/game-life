@@ -1,4 +1,4 @@
-# game-life
+# Proyecto "El juego de la Vida"
 Proyecto 1TP MCC 2019
 
 #### Diagrama de clases
