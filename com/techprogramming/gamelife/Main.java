@@ -2,9 +2,23 @@ package com.techprogramming.gamelife;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+/**
+* Proyecto "El juego de la Vida"
+* Proyecto 1TP MCC 2019
+* 
+* @author  Marcos Plata
+* @author  Misael Burruel
+* @version 1.0
+* @since   2019-09-02
+*/
 public class Main {
 	
+	/**
+   * Metodo Main, inicia la ejecución del programa
+   * Pregunta al usuario como quiere generar su tablero
+   * Imprime las generaciones hasta que se cumpla alguna
+   * de las condiciones de salida
+	*/
 	public static void main(String[] args) {
 		
 		int currentGen = 1;

@@ -7,6 +7,10 @@ public class Board {
 	private int rows;
 	private int columns;
 	
+	/**
+	* Constructor, recibe filas y columnas
+	*
+	**/
 	Board(int rows, int columns){
 		this.rows = rows;
 		this.columns = columns;
@@ -20,10 +24,19 @@ public class Board {
 		}
 	}
 	
+	/**
+	* Pone un organismo vivo en la posición
+	* X, Y mandada
+	*
+	*/
 	public void addOrganism(int x, int y) {
 		this.organisms[x][y].setAlive(true);
 	}
 	
+	/**
+	* Imprime el tablero a consola
+	*
+	*/
 	public void print() {
 		System.out.print("\t");
 		int columns = this.organisms[0].length;
@@ -46,10 +59,20 @@ public class Board {
 		}
 	}
 	
+	/**
+	* Pone un organismo vivo o muerto en la posición
+	* X, Y mandada, con el parametro booleano alive
+	* para indicar si vive o muere
+	*/
 	public void setAlive(int x,int y, boolean alive) {
 		this.organisms[x][y].setAlive(alive);
 	}
 	
+	/**
+	* Obtiene un organismo en la posición X,Y indicadam
+	* si el organismo esta fuera de los limites de la matriz,
+	* regresa nulo.
+	*/
 	private Organism getOrganismAt(int x,int y) {
 		if(x < 0 || y < 0 || x == this.rows || y == this.columns) {
 			return null;
@@ -58,6 +81,11 @@ public class Board {
 		}
 	}
 	
+	/**
+	* Obtiene los vecinos del organismo en la posición
+	* x, y indicada, el retorno debe ser un arreglo de exactamente
+	* 8 posiciones.
+	*/
 	private Organism[] getNeighbors(int x,int y) {
 		
 		Organism organisms[] = new Organism[8];
@@ -74,6 +102,11 @@ public class Board {
 		return organisms;
 	}
 	
+	/**
+	* Regresa false si y solo si todos los
+	* organismos del tablero estan muertos, 
+	* caso contrario regresa true.
+	*/
 	public boolean isAlive() {
 		boolean alive = false;
 		for (int i = 0; i < this.rows; i++) {
@@ -85,6 +118,11 @@ public class Board {
 		return alive;
 	}
 	
+	/**
+	* Genera un tablero representando la siguiente
+	* generación de acuerdo al estado de este tablero,
+	* esto en base a las reglas.
+	*/
 	public Board nextGen() {
 		Board board = new Board(this.rows, this.columns);
 		Organism org = null;

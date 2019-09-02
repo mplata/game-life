@@ -5,7 +5,19 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+/**
+* Clase FileBoardGenerator
+* 
+* Crea un tablero basandose en el archivo local "data.txt",
+* generandolo a partir de la regla:
+*  - Si el caracter es '0', es un organismo vivo, caso contrario,
+*  es un organismo muerto.
+*  
+* @author  Marcos Plata
+* @author  Misael Burruel
+* @version 1.0
+* @since   2019-09-02
+*/
 public class FileBoardGenerator {
 	
 	private Scanner sc;
