@@ -33,11 +33,24 @@ public class Main {
 			try {
 				choice = scanner.nextInt();
 			} catch (InputMismatchException e) {
+				System.out.println("Ingrese un numero valido");
 				scanner = new Scanner(System.in);
 				choice = 0;
 			}
 		}
 		
+		int maxGenerations = 0;
+		while(maxGenerations > 50 || maxGenerations < 1) {
+			System.out.println("Numero de generaciones del juego (entre 1 y 50): ");
+			
+			try {
+				maxGenerations = scanner.nextInt();
+			} catch (InputMismatchException e) {
+				System.out.println("Ingrese un numero valido");
+				scanner = new Scanner(System.in);
+				maxGenerations = 0;
+			}
+		}
 		Board currentBoard = null;
 		if(choice == 1) {
 			InputBoardGenerator generator = new InputBoardGenerator();
@@ -54,7 +67,7 @@ public class Main {
 		System.out.println("Generación "+currentGen);
 		currentBoard.print();
 		scanner.nextLine();
-		while(currentBoard.isAlive()) {
+		while(currentBoard.isAlive() && currentGen <= maxGenerations - 1) {
 			if(currentGen > 1) {
 				System.out.println("Generación "+currentGen);
 				currentBoard.print();
