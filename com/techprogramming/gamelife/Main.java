@@ -52,16 +52,17 @@ public class Main {
 			}
 		}
 		Board currentBoard = null;
+		BoardGenerator generator;
 		if(choice == 1) {
-			InputBoardGenerator generator = new InputBoardGenerator();
+			generator = new InputBoardGenerator();
 			currentBoard = generator.generateBoard();
 		}
 		if(choice == 2) {
-			FileBoardGenerator generator = new FileBoardGenerator();
+			generator = new FileBoardGenerator();
 			currentBoard = generator.generateBoard();
 		}
 		if(choice == 3) {
-			RandomBoardGenerator generator = new RandomBoardGenerator();
+			generator = new RandomBoardGenerator();
 			currentBoard = generator.generateBoard();
 		}
 		System.out.println("Generación "+currentGen);

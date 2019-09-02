@@ -16,7 +16,7 @@ import java.util.Scanner;
 * @version 1.0
 * @since   2019-09-02
 */
-public class InputBoardGenerator {
+public class InputBoardGenerator implements BoardGenerator{
 	
 	public Board generateBoard() {
 		int k = 0 , x = 0, y = 0, totalRows = 0, totalColumns = 0, organismosIniciales = 0;

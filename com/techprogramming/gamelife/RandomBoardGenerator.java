@@ -12,7 +12,7 @@ import java.util.Random;
 * @version 1.0
 * @since   2019-09-02
 */
-public class RandomBoardGenerator {
+public class RandomBoardGenerator implements BoardGenerator{
 
 	public Board generateBoard() {
 		

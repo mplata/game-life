@@ -18,7 +18,7 @@ import java.util.Scanner;
 * @version 1.0
 * @since   2019-09-02
 */
-public class FileBoardGenerator {
+public class FileBoardGenerator implements BoardGenerator{
 	
 	private Scanner sc;
 
