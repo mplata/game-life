@@ -1,7 +1,7 @@
 # Proyecto "El juego de la Vida"
 Proyecto 1TP MCC 2019
 
-## Tutor: María Lucia Barrón Estrada
+## Tutor: María Lucía Barrón Estrada
 
 ## Alumnos:
 - Luis Marcos Plata Delgado
