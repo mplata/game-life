@@ -51,20 +51,24 @@ public class Main {
 				maxGenerations = 0;
 			}
 		}
+		
 		Board currentBoard = null;
-		BoardGenerator generator;
-		if(choice == 1) {
+		BoardGenerator generator = null;
+		
+		switch (choice) {
+		case 1:
 			generator = new InputBoardGenerator();
-			currentBoard = generator.generateBoard();
-		}
-		if(choice == 2) {
+			break;
+		case 2:
 			generator = new FileBoardGenerator();
-			currentBoard = generator.generateBoard();
-		}
-		if(choice == 3) {
+			break;
+		case 3:
 			generator = new RandomBoardGenerator();
-			currentBoard = generator.generateBoard();
+			break;
 		}
+		
+		currentBoard = generator.generateBoard();
+		
 		System.out.println("Generación "+currentGen);
 		currentBoard.print();
 		scanner.nextLine();
