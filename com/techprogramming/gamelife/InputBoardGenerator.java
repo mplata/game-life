@@ -116,9 +116,8 @@ public class InputBoardGenerator implements BoardGenerator{
 					k = 0;
 				}
 			}while (k == 0);
-			board.addOrganism(x, y);
+			board.setAlive(x, y, true);
 		}
-		//scn.close();
 		return board;
 	}
 }

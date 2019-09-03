@@ -24,14 +24,6 @@ public class Board {
 		}
 	}
 	
-	/**
-	* Pone un organismo vivo en la posición
-	* X, Y mandada
-	*
-	*/
-	public void addOrganism(int x, int y) {
-		this.organisms[x][y].setAlive(true);
-	}
 	
 	/**
 	* Imprime el tablero a consola
