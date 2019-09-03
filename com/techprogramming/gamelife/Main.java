@@ -34,7 +34,7 @@ public class Main {
 				choice = scanner.nextInt();
 			} catch (InputMismatchException e) {
 				System.out.println("Ingrese un numero valido");
-				scanner = new Scanner(System.in);
+				scanner.next();
 				choice = 0;
 			}
 		}
@@ -47,7 +47,7 @@ public class Main {
 				maxGenerations = scanner.nextInt();
 			} catch (InputMismatchException e) {
 				System.out.println("Ingrese un numero valido");
-				scanner = new Scanner(System.in);
+				scanner.next();
 				maxGenerations = 0;
 			}
 		}

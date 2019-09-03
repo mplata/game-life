@@ -24,6 +24,9 @@ public class InputBoardGenerator implements BoardGenerator{
 		do {
 			try {
 				System.out.println("Ingrese numero de filas");
+				/*while(!scn.hasNextInt()) {
+					System.out.println("Ingrese un numero valido");
+				}*/
 				totalRows = scn.nextInt();
 				if (totalRows <= 1 || totalRows > 20)
 				{
@@ -35,7 +38,7 @@ public class InputBoardGenerator implements BoardGenerator{
 				}
 			}catch(InputMismatchException exc) {
 				System.out.println("Ingrese un numero valido");
-				scn = new Scanner(System.in);
+				scn.next();
 				k = 0;
 			}
 		}while (k == 0);
@@ -52,7 +55,7 @@ public class InputBoardGenerator implements BoardGenerator{
 				}
 			}catch(InputMismatchException exc) {
 				System.out.println("Ingrese un numero valido");
-				scn = new Scanner(System.in);
+				scn.next();
 				k = 0;
 			}
 		}while (k == 0);
@@ -70,7 +73,7 @@ public class InputBoardGenerator implements BoardGenerator{
 				}
 			}catch(InputMismatchException exc) {
 				System.out.println("Ingrese un numero valido");
-				scn = new Scanner(System.in);
+				scn.next();
 				k = 0;
 			}
 		}while(k == 0);
@@ -82,7 +85,7 @@ public class InputBoardGenerator implements BoardGenerator{
 				try {
 					System.out.println("Ingrese X del organismo "+(i+1));
 					x = scn.nextInt();
-					if (x > totalRows || x < 0) {
+					if (x > totalRows -1 || x < 0) {
 						System.out.println("!Error¡ Introduzca un numero valido.");
 						k = 0;
 					}
@@ -91,7 +94,7 @@ public class InputBoardGenerator implements BoardGenerator{
 					}
 				}catch(InputMismatchException exc) {
 					System.out.println("Ingrese un numero valido");
-					scn = new Scanner(System.in);
+					scn.next();
 					k = 0;
 				}
 			}
@@ -100,7 +103,7 @@ public class InputBoardGenerator implements BoardGenerator{
 				try {
 					System.out.println("Ingrese Y del organismo "+(i+1));
 					y = scn.nextInt();
-					if( y > totalColumns || y < 0 ) {
+					if( y > totalColumns -1 || y < 0 ) {
 						System.out.println("!Error¡ Introduzca un numero valido.");
 						k = 0;
 					}
@@ -109,7 +112,7 @@ public class InputBoardGenerator implements BoardGenerator{
 					}
 				}catch(InputMismatchException exc) {
 					System.out.println("Ingrese un numero valido");
-					scn = new Scanner(System.in);
+					scn.next();
 					k = 0;
 				}
 			}while (k == 0);

@@ -74,10 +74,16 @@ public class Board {
 	* regresa nulo.
 	*/
 	private Organism getOrganismAt(int x,int y) {
-		if(x < 0 || y < 0 || x == this.rows || y == this.columns) {
+		/*if(x < 0 || y < 0 || x == this.rows || y == this.columns) {
 			return null;
 		}else {
 			return this.organisms[x][y];
+		}*/
+		try {
+			return this.organisms[x][y];
+		} catch (ArrayIndexOutOfBoundsException e) {
+			
+			return null;
 		}
 	}
 	
