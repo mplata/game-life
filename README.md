@@ -3,7 +3,7 @@ Proyecto 1TP MCC 2019
 
 #### Diagrama de clases
 
-#### Tutor: María Lucia Barrón Estrada
+## Tutor: María Lucia Barrón Estrada
 
 ## Alumnos:
 -Luis Marcos Plata Delgado
