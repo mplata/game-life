@@ -52,9 +52,10 @@ public class Main {
 			}
 		}
 		
+		Board lastBoard = null;
 		Board currentBoard = null;
 		BoardGenerator generator = null;
-		
+
 		switch (choice) {
 		case 1:
 			generator = new InputBoardGenerator();
@@ -72,15 +73,17 @@ public class Main {
 		System.out.println("Generación "+currentGen);
 		currentBoard.print();
 		scanner.nextLine();
-		while(currentBoard.isAlive() && currentGen <= maxGenerations - 1) {
+		boolean equalsLast = false;
+		while(currentBoard.isAlive() && currentGen <= maxGenerations - 1 && !equalsLast) {
 			if(currentGen > 1) {
 				System.out.println("Generación "+currentGen);
 				currentBoard.print();
 			} 
+			lastBoard = currentBoard;
 			currentBoard = currentBoard.nextGen();
-			System.out.println("Presione enter para continuar....");
 			scanner.nextLine();
 		    currentGen++;
+		    equalsLast = currentBoard.equals(lastBoard);
 		}
 		System.out.println("Generación Final ("+currentGen+")");
 		currentBoard.print();

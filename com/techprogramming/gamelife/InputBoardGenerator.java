@@ -116,6 +116,10 @@ public class InputBoardGenerator implements BoardGenerator{
 					k = 0;
 				}
 			}while (k == 0);
+			if(board.getOrganismAt(x, y).isAlive()){
+				System.out.println("Organismo ya creado, introduzca otra coordenada.");
+				i--;
+			}
 			board.setAlive(x, y, true);
 		}
 		return board;

@@ -65,7 +65,7 @@ public class Board {
 	* si el organismo esta fuera de los limites de la matriz,
 	* regresa nulo.
 	*/
-	private Organism getOrganismAt(int x,int y) {
+	public Organism getOrganismAt(int x,int y) {
 		/*if(x < 0 || y < 0 || x == this.rows || y == this.columns) {
 			return null;
 		}else {
@@ -133,5 +133,24 @@ public class Board {
 			}
 		}
 		return board;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if(obj == null) {
+			return true;
+		}
+		Board board = (Board)obj;
+		Organism other;
+		Organism myOrganism;
+		for (int i = 0; i < this.rows; i++) {
+			for (int j = 0; j < this.columns; j++) {
+				myOrganism = this.organisms[i][j];
+				other = board.getOrganismAt(i, j);
+				if (myOrganism.isAlive() != other.isAlive()) return false;
+			}
+		}
+		return true;
 	}
 }
